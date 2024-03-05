@@ -37,7 +37,6 @@ fn main() {
     ];
     println!("Hello, what's your name?");
     let name = what_is_your_name();
-    let mut allow_them_in = false;
 
     let known_visitor = visitor_list
         .iter()
