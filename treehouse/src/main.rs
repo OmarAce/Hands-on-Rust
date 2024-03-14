@@ -69,8 +69,7 @@ fn how_old_are_you() -> i8 {
     stdin()
         .read_line(&mut your_age)
         .expect("Failed to read line");
-    let x: i8 = your_age.trim().parse().expect("Input is not an integer");
-    return x
+    return your_age.trim().parse::<i8>().expect("Input is not an integer");
 }
 
 // Main code block
