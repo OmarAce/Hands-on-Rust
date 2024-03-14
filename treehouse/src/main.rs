@@ -1,11 +1,19 @@
 use std::io::stdin;
 
 #[derive(Debug)]
+enum VisitorAction {
+    Accept,
+    AcceptWithNote { note: String },
+    Refuse,
+    Probation
+}
 // A struct is a custom data type that lets you package together and 
 // name multiple related values that make up a meaningful group. Similar to an Object's data attributes.
+#[derive(Debug)]
 struct Visitor {
     name: String,
-    greeting: String,
+    action: VisitorAction,
+    age: i8
 }
 
 // The impl keyword is primarily used to define implementations on types. Inherent implementations are standalone,
@@ -13,16 +21,30 @@ struct Visitor {
 // Functions and consts can both be defined in an implementation. A function defined in an impl block can be standalone, meaning it would be called like Foo::bar(). 
 // If the function takes self, &self, or &mut self as its first argument, it can also be called using method-call syntax, a familiar feature to any object oriented programmer, like foo.bar().
 impl Visitor {
-    fn new(name: &str, greeting: &str) -> Self {
+    fn new(name: &str, action: VisitorAction, age: i8) -> Self {
         Self {
             name: name.to_lowercase(),
-            greeting: greeting.to_string(),
+            action,
+            age
         }
     }
     fn greet_visitor(&self) {
-        println!("{}", self.greeting);
+        match &self.action {
+            VisitorAction::Accept => println!("Welcome to the treehouse, {}", self.name),
+            VisitorAction::AcceptWithNote { note } => {
+                println!("Welcome to the treehouse, {}", self.name);
+                println!("{}", note);
+                if self.age < 21 {
+                println!("Do not serve alcohol to {}", self.name);
+            }
+            }
+            VisitorAction::Probation => println!("{} is now a
+            probationary member", self.name),
+            VisitorAction::Refuse => println!("Do not allow {} in!", self.name),
+        }
     }
 }
+
 
 // Function what is your name is defined returns a string
 fn what_is_your_name() -> String {
@@ -41,9 +63,11 @@ fn main() {
     // Mutable Vector defined. Simlar to arrays, but vectors are a sequential containers that store elements and are not index based. 
     // Array store a fixed-size sequential collection of elements of the same type and are index based.
     let mut visitor_list = vec![
-        Visitor::new("bert", "Hello Bert, enjoy your treehouse."),
-        Visitor::new("steve","Hi Steve. Your milk is in the fridge."),
-        Visitor::new("fred", "Wow, who invited Fred?"),
+        Visitor::new("Bert", VisitorAction::Accept, 45),
+        Visitor::new("Steve", VisitorAction::AcceptWithNote{
+        note: String::from("Lactose-free milk is in the fridge")
+        }, 15),
+        Visitor::new("Fred", VisitorAction::Refuse, 30),
     ];
     loop{
         //Loop will keep accepting user input and if the name mention is in the visitor list it will return a string with that user's welcome message
@@ -64,7 +88,7 @@ fn main() {
                 break;
                 } else {
                     println!("{} is not on the visitor list.", name);
-                    visitor_list.push(Visitor::new(&name, "New friend"));
+                    visitor_list.push(Visitor::new(&name, VisitorAction::Probation, 0));
                 }
             }
         }
