@@ -38,8 +38,12 @@ impl Visitor {
                 println!("Do not serve alcohol to {}", self.name);
             }
             }
-            VisitorAction::Probation => println!("{} is now a
-            probationary member", self.name),
+            VisitorAction::Probation => {
+                println!("{} is now a probationary member", self.name);
+                if self.age < 21 {
+                    println!("Do not serve alcohol to {}", self.name); 
+                }
+            }
             VisitorAction::Refuse => println!("Do not allow {} in!", self.name),
         }
     }
