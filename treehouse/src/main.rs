@@ -62,6 +62,17 @@ fn what_is_your_name() -> String {
         .to_lowercase()
 }
 
+// Functino how old are you is defined and parses line for int
+fn how_old_are_you() -> i8 {
+    let mut your_age = String::new();
+
+    stdin()
+        .read_line(&mut your_age)
+        .expect("Failed to read line");
+    let x: i8 = your_age.trim().parse().expect("Input is not an integer");
+    return x
+}
+
 // Main code block
 fn main() {
     // Mutable Vector defined. Simlar to arrays, but vectors are a sequential containers that store elements and are not index based. 
@@ -92,7 +103,9 @@ fn main() {
                 break;
                 } else {
                     println!("{} is not on the visitor list.", name);
-                    visitor_list.push(Visitor::new(&name, VisitorAction::Probation, 0));
+                    println!("How old are you?");
+                    let age = how_old_are_you();
+                    visitor_list.push(Visitor::new(&name, VisitorAction::Probation, age));
                 }
             }
         }
