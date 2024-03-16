@@ -63,14 +63,24 @@ fn what_is_your_name() -> String {
 }
 
 // Functino how old are you is defined and parses line for int
-fn how_old_are_you() -> i8 {
+fn how_old_are_you() ->  i8 {
     let mut your_age = String::new();
 
     stdin()
         .read_line(&mut your_age)
         .expect("Failed to read line");
-    return your_age.trim().parse::<i8>().expect("Input is not an integer");
+    
+    match your_age.trim().parse::<i8>() {
+        Ok(val) => {
+            return val
+        }
+        Err(_) => {
+            println!("Please enter a number.");
+            return how_old_are_you()
+        }
+    }
 }
+
 
 // Main code block
 fn main() {
