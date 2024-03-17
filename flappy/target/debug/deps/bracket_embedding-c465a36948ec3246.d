@@ -1,0 +1,8 @@
+C:\Users\aweso\Desktop\Repositories\Hands-on-Rust\flappy\target\debug\deps\libbracket_embedding-c465a36948ec3246.rmeta: C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bracket-embedding-0.8.7\src\lib.rs C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bracket-embedding-0.8.7\src\embedding.rs C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bracket-embedding-0.8.7\src\../resources/terminal8x8.png C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bracket-embedding-0.8.7\src\../resources/vga8x16.png
+
+C:\Users\aweso\Desktop\Repositories\Hands-on-Rust\flappy\target\debug\deps\bracket_embedding-c465a36948ec3246.d: C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bracket-embedding-0.8.7\src\lib.rs C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bracket-embedding-0.8.7\src\embedding.rs C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bracket-embedding-0.8.7\src\../resources/terminal8x8.png C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bracket-embedding-0.8.7\src\../resources/vga8x16.png
+
+C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bracket-embedding-0.8.7\src\lib.rs:
+C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bracket-embedding-0.8.7\src\embedding.rs:
+C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bracket-embedding-0.8.7\src\../resources/terminal8x8.png:
+C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\bracket-embedding-0.8.7\src\../resources/vga8x16.png:

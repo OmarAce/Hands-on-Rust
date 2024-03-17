@@ -1,0 +1,11 @@
+C:\Users\aweso\Desktop\Repositories\Hands-on-Rust\flappy\target\debug\deps\liblibloading-8d77b4c909a405fb.rmeta: C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\lib.rs C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\changelog.rs C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\os\mod.rs C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\os\windows\mod.rs C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\util.rs C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\error.rs C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\safe.rs
+
+C:\Users\aweso\Desktop\Repositories\Hands-on-Rust\flappy\target\debug\deps\libloading-8d77b4c909a405fb.d: C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\lib.rs C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\changelog.rs C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\os\mod.rs C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\os\windows\mod.rs C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\util.rs C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\error.rs C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\safe.rs
+
+C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\lib.rs:
+C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\changelog.rs:
+C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\os\mod.rs:
+C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\os\windows\mod.rs:
+C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\util.rs:
+C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\error.rs:
+C:\Users\aweso\.cargo\registry\src\index.crates.io-6f17d22bba15001f\libloading-0.7.4\src\safe.rs:
