@@ -20,6 +20,7 @@ enum GameMode {
 }
 
 impl State {
+
     fn new() -> Self {
         State {
             player: Player::new(5,25),
@@ -29,9 +30,11 @@ impl State {
             score: 0,
         }
     }
+
     fn play(&mut self, ctx:&mut BTerm){
         ctx.cls_bg(NAVY);
         self.frame_time += ctx.frame_time_ms;
+        // if frame time surpasses frame duration reset and move / tick rate
         if self.frame_time > FRAME_DURATION {
             self.frame_time = 0.0;
             self.player.gravity_and_move()
@@ -42,6 +45,8 @@ impl State {
         self.player.render(ctx);
         ctx.print(0,0, "Press SPACE to flap");
         ctx.print(0, 1, &format!("Score: {}", self.score));
+        ctx.print(0, 2, &format!("frame_time: {}", self.frame_time));
+
 
         self.obstacle.render(ctx, self.player.x);
         // If player passes obstacle add to score
@@ -56,6 +61,7 @@ impl State {
             self.mode = GameMode::End;
         }
     }
+
     fn restart(&mut self) {
         self.player = Player::new(5, 25);
         self.frame_time = 0.0;
@@ -63,6 +69,7 @@ impl State {
         self.mode = GameMode::Playing;
         self.score = 0;
     }
+
     fn main_menu(&mut self, ctx:&mut BTerm) {
         ctx.cls();
         ctx.print_centered(5, "Welcome to Flappy Dragon");
@@ -101,6 +108,7 @@ struct Player {
 }
 
 impl Player {
+
     fn new(x: i32, y:i32) -> Self {
         Player {
             x,
@@ -108,6 +116,7 @@ impl Player {
             velocity: 0.0,
         }
     }
+
     fn render(&mut self, ctx: &mut BTerm) {
         ctx.set(
             0,
@@ -132,6 +141,7 @@ impl Player {
     fn flap(& mut self) {
         self.velocity = -2.0;
     }
+
 }
 
 //OBSTACLES
@@ -175,6 +185,9 @@ impl Obstacle {
             );
         }
     }
+
+    // If the player’s x coordinate matches that of the obstacle, and the player’s y coordinate 
+    // is either above or below the gap, then a collision has occurred.
     fn hit_obstacle(&self, player: &Player) -> bool {
         let half_size = self.size / 2;
         let does_x_match = player.x == self.x;
